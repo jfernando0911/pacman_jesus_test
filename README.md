@@ -1,58 +1,53 @@
 # pacman
-Pac-Man
+Pac-Man App Documentation
 
-## Install dependencies
+- [pacman](#pacman)
+  - [Architecture](#architecture)
+  - [Terraform and Azure](#terraform-and-azure)
+  - [Ansible and Vault](#ansible-and-vault)
+  - [Kubernetes, helm and pipelines](#kubernetes-helm-and-pipelines)
+  - [Kubernetes namespace diagram](#kubernetes-namespace-diagram)
+  - [Kubernetes diagram](#kubernetes-diagram)
+  - [Image deploy](#image-deploy)
+  - [Deploy to Kubernetes cluster](#deploy-to-kubernetes-cluster)
+  - [Restart deployment](#restart-deployment)
+  - [Uninstalling of deployment](#uninstalling-of-deployment)
 
-```
-npm install
-```
 
-## Getting started
+## Architecture
 
-```
-npm run start
-```
+---
 
-## Development
+## Terraform and Azure
 
-```
-npm run dev
-```
+---
 
-## Create Application Container Image
+## Ansible and Vault
 
-### Docker Container Image
+---
 
-The [Dockerfile](docker/Dockerfile) performs the following steps:
+## Kubernetes, helm and pipelines
 
-1. It is based on Node.js LTS Version 6 (Boron).
-1. It then clones the Pac-Man game into the configured application directory.
-1. Exposes port 8080 for the web server.
-1. Starts the Node.js application using `npm start`.
+## Kubernetes namespace diagram
 
-To build the image run:
+Set up of a Kubernetes cluster to deploy an application that consists of two fundamental elements, a mongo db pod and nodejs pod. The pods contain, as the name says it, a container. In a a level above we have a cluster that is set up in the cloud.
 
-```
-cd docker
-docker build -t <registry>/<user>/pacman-nodejs-app .
-```
+## Kubernetes diagram
 
-You can test the image by running:
+![](./img/01_diagram_namespace_pacman.png)
 
-```
-docker run -p 8000:8080 <registry>/<user>/pacman-nodejs-app
-```
+## Image deploy
 
-And going to `http://localhost:8000/` to see if you get the Pac-Man game.
+![](./img/02_image_deploy.png)
 
-Once you're satisfied you can push the image to the container registry.
+## Deploy to Kubernetes cluster
 
-```
-docker push <registry>/<user>/pacman-nodejs-app
-```
+![](./img/03_deploy_kubernetes.png)
 
-### Building using an s2i image
+## Restart deployment
 
-```
-s2i build . centos/nodejs-6-centos7 pacman
-```
+![](./img/04_restart_pods.png)
+
+## Uninstalling of deployment
+
+![](./img/05_Uninstall.png)
