@@ -16,6 +16,8 @@ Pac-Man App Documentation
 
 ## Architecture
 
+![](./img/architecture.png)
+
 ---
 
 ## Terraform and Azure
@@ -27,6 +29,7 @@ Implementation of the infrastructure of Azure using Terraform:
   - Virtual Machine: Virtual-Machine-1
 
 ![](./img/06_terraform.png)
+
 ---
 
 ## Ansible and Vault
@@ -34,6 +37,7 @@ Implementation of the infrastructure of Azure using Terraform:
 Ansible can install services, prepare services or resources and applications within the cloud. We use it to automate the installation of vault making the process faster and without errors.
 And vault we use it to securely store secret data that we handle in this project
 ![](./img/vault%20.png)
+
 ---
 
 
