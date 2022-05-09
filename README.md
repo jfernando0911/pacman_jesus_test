@@ -19,7 +19,14 @@ Pac-Man App Documentation
 ---
 
 ## Terraform and Azure
+Implementation of the infrastructure of Azure using Terraform:
+- Resource group: Integrative-DevOps-Project
+  - Container REgistry: containerRegistry1123581321
+  - Kubernetes Cluster: example-aks1
+  - Network Interface: myNetworkInterface
+  - Virtual Machine: Virtual-Machine-1
 
+![](./img/06_terraform.png)
 ---
 
 ## Ansible and Vault
