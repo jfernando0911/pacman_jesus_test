@@ -21,7 +21,7 @@ Pac-Man App Documentation
 ## Terraform and Azure
 Implementation of the infrastructure of Azure using Terraform:
 - Resource group: Integrative-DevOps-Project
-  - Container REgistry: containerRegistry1123581321
+  - Container Registry: containerRegistry1123581321
   - Kubernetes Cluster: example-aks1
   - Network Interface: myNetworkInterface
   - Virtual Machine: Virtual-Machine-1
@@ -31,7 +31,11 @@ Implementation of the infrastructure of Azure using Terraform:
 
 ## Ansible and Vault
 
+Ansible can install services, prepare services or resources and applications within the cloud. We use it to automate the installation of vault making the process faster and without errors.
+And vault we use it to securely store secret data that we handle in this project
+![](./img/vault%20.png)
 ---
+
 
 ## Kubernetes, helm and pipelines
 
